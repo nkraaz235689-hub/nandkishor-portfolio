@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Nandkishor is a graphic designer specializing in YouTube thumbnail design, Instagram Reel cover design and creative social media graphics.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Nandkishor">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nandkishor — Graphic Designer">
+  <meta property="og:description" content="Graphic Designer • Thumbnail Designer • Reel Cover Designer">
+  <meta property="og:image" content="assets/profile.png">
+  <meta property="og:site_name" content="Nandkishor Portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nandkishor — Graphic Designer">
+  <meta name="twitter:description" content="Graphic Designer specializing in thumbnails, Reel covers and social media design.">
+  <title>Nandkishor | Graphic Designer, Thumbnail & Reel Cover Designer</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Nandkishor",
+    "jobTitle":"Graphic Designer",
+    "description":"Graphic Designer specializing in YouTube thumbnails, Instagram Reel covers and social media graphics.",
+    "sameAs":["https://www.instagram.com/nk_graphic___designer/"]
+  }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+    :root{
+      --bg:#070707;
+      --card:#101010;
+      --text:#f5f5f5;
+      --muted:#a2a2a2;
+      --line:#242424;
+      --accent:#ffffff;
+      --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--bg); color:var(--text);
+      font-family:"DM Sans",Arial,sans-serif; line-height:1.6;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),92%);margin:auto}
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:20;
+      background:rgba(7,7,7,.72);backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.04em;font-size:22px}
+    .logo span{color:#777}
+    .navlinks{display:flex;gap:28px;color:#bdbdbd;font-size:14px}
+    .navlinks a:hover{color:white}
+    .navbtn{
+      padding:10px 17px;border:1px solid #3a3a3a;border-radius:999px;
+      font-size:13px;transition:.25s
+    }
+    .navbtn:hover{background:white;color:black;border-color:white}
+    .hero{
+      min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;
+      align-items:center;gap:50px;padding-top:90px;
+    }
+    .eyebrow{color:#9a9a9a;text-transform:uppercase;letter-spacing:.18em;font-size:12px;margin-bottom:18px}
+    h1{
+      font-family:"Space Grotesk";font-size:clamp(52px,8vw,104px);
+      line-height:.92;letter-spacing:-.065em;max-width:750px
+    }
+    h1 em{font-style:normal;color:#777}
+    .hero p{max-width:560px;color:#aaa;font-size:17px;margin:28px 0}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:13px 20px;border-radius:999px;border:1px solid #3a3a3a;
+      font-weight:600;font-size:14px;transition:.25s
+    }
+    .btn.primary{background:#fff;color:#000;border-color:#fff}
+    .btn:hover{transform:translateY(-2px)}
+    .portrait{
+      position:relative;display:flex;justify-content:center;align-items:end;
+      min-height:650px
+    }
+    .portrait:before{
+      content:"";position:absolute;width:72%;height:72%;
+      background:#171717;border-radius:50%;filter:blur(70px);opacity:.65
+    }
+    .portrait img{
+      position:relative;width:min(100%,560px);max-height:760px;object-fit:cover;
+      object-position:center top;filter:grayscale(100%);
+      border-radius:4px;mask-image:linear-gradient(to bottom,#000 90%,transparent 100%);
+    }
+    section{padding:105px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
+    .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#777}
+    h2{font-family:"Space Grotesk";font-size:clamp(34px,5vw,58px);letter-spacing:-.05em;line-height:1}
+    .section-head p{max-width:420px;color:#888}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+    .service{padding:32px 25px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .service:last-child{border-right:0}
+    .num{font-size:12px;color:#666;margin-bottom:60px}
+    .service h3{font-family:"Space Grotesk";font-size:25px;margin-bottom:10px}
+    .service p{color:#8d8d8d;font-size:14px}
+    .portfolio{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:14px
+    }
+    .work{
+      min-height:340px;border:1px solid var(--line);background:#111;
+      position:relative;overflow:hidden;padding:0;display:flex;flex-direction:column;justify-content:flex-end
+    }
+    .work img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      transition:transform .5s ease,filter .5s ease;
+    }
+    .work:hover img{transform:scale(1.035);filter:brightness(.72)}
+    .work .caption{
+      position:relative;z-index:2;padding:22px;
+      background:linear-gradient(transparent,rgba(0,0,0,.92));
+      padding-top:80px;
+    }
+    .work:nth-child(1),.work:nth-child(2),.work:nth-child(3){min-height:360px}
+    .work:nth-child(4){min-height:560px}
+    .work > *{position:relative}
+    .work-tag{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#777;margin-bottom:7px}
+    .work h3{font-family:"Space Grotesk";font-size:28px;letter-spacing:-.04em}
+    .work p{font-size:13px;color:#888;margin-top:5px}
+    .note{
+      border:1px dashed #333;padding:16px;margin-top:18px;color:#777;font-size:13px
+    }
+    .about{
+      display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start
+    }
+    .about-text{font-size:clamp(25px,3.3vw,42px);line-height:1.12;letter-spacing:-.04em}
+    .about-text span{color:#666}
+    .facts{border-top:1px solid var(--line)}
+    .fact{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid var(--line);color:#999}
+    .fact strong{color:#eee}
+    .contact{
+      border:1px solid #262626;background:#0d0d0d;padding:55px;
+      display:flex;justify-content:space-between;align-items:center;gap:30px
+    }
+    .contact h2{max-width:700px}
+    footer{padding:30px 0 45px;color:#666;font-size:13px;display:flex;justify-content:space-between}
+    .fade{opacity:0;transform:translateY(18px);transition:.7s ease}
+    .fade.show{opacity:1;transform:none}
+    @media(max-width:850px){
+      .navlinks{display:none}
+      .hero{grid-template-columns:1fr;padding-top:120px}
+      .portrait{min-height:520px;order:-1}
+      .portrait img{max-height:590px}
+      .services,.portfolio{grid-template-columns:1fr}
+      .service{border-right:0}
+      .about{grid-template-columns:1fr;gap:35px}
+      .contact{padding:35px;flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:520px){
+      h1{font-size:56px}
+      section{padding:75px 0}
+      .portrait{min-height:430px}
+      .section-head{display:block}
+      .section-head p{margin-top:18px}
+      footer{display:block}
+      footer span{display:block;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">NK<span>.</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+      </div>
+      <a class="navbtn" href="#contact">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div class="fade">
+      <div class="eyebrow">Independent Graphic Designer</div>
+      <h1>Visuals that<br><em>get noticed.</em></h1>
+      <p>I’m Nandkishor — a graphic designer focused on bold thumbnails, engaging Reel covers and clean visual designs for creators and brands.</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">View My Work</a>
+        <a class="btn" href="https://www.instagram.com/nk_graphic___designer/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+    <div class="portrait fade">
+      <img src="assets/profile.png" alt="Nandkishor, graphic designer and thumbnail designer">
+    </div>
+  </section>
+
+  <section id="services" class="wrap">
+    <div class="section-head fade">
+      <div>
+        <div class="kicker">01 / Services</div>
+        <h2>What I create.</h2>
+      </div>
+      <p>Design built to look professional, communicate quickly and make your content stand out.</p>
+    </div>
+    <div class="services">
+      <article class="service fade">
+        <div class="num">01</div>
+        <h3>Graphic Design</h3>
+        <p>Creative social media graphics, posters, promotional visuals and branded content.</p>
+      </article>
+      <article class="service fade">
+        <div class="num">02</div>
+        <h3>Thumbnail Design</h3>
+        <p>High-impact YouTube thumbnails designed for clear messaging and strong visual hierarchy.</p>
+      </article>
+      <article class="service fade">
+        <div class="num">03</div>
+        <h3>Reel Covers</h3>
+        <p>Scroll-stopping Instagram Reel covers with bold typography and a consistent creator identity.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="work" class="wrap">
+    <div class="section-head fade">
+      <div>
+        <div class="kicker">02 / Selected Work</div>
+        <h2>My portfolio.</h2>
+      </div>
+      <p>Your strongest client projects can be placed here. Replace these cards with your actual designs.</p>
+    </div>
+    <div class="portfolio">
+      <article class="work fade"><img src="assets/work1.png" alt="Mobile Graphic Design thumbnail"><div class="caption"><div class="work-tag">YouTube Thumbnail</div><h3>Mobile Graphic Design</h3><p>Bold educational thumbnail</p></div></article>
+      <article class="work fade"><img src="assets/work2.png" alt="Make Money Online thumbnail"><div class="caption"><div class="work-tag">YouTube Thumbnail</div><h3>Make Money Online</h3><p>High-impact finance visual</p></div></article>
+      <article class="work fade"><img src="assets/work3.png" alt="YouTube Channel thumbnail"><div class="caption"><div class="work-tag">YouTube Thumbnail</div><h3>YouTube Channel</h3><p>Creator-focused visual design</p></div></article>
+      <article class="work fade"><img src="assets/work4.png" alt="Hindi social media thumbnail"><div class="caption"><div class="work-tag">Content Design</div><h3>Hindi Creator Visual</h3><p>Long-form social content artwork</p></div></article>
+      <article class="work fade"><div class="caption"><div class="work-tag">Instagram</div><h3>Reel Cover Design</h3><p>More projects coming soon</p></div></article>
+      <article class="work fade"><div class="caption"><div class="work-tag">Custom</div><h3>Client Project</h3><p>Available for design work</p></div></article>
+    </div>
+    <div class="note">These are selected designs from Nandkishor’s portfolio. More thumbnails, Reel covers and graphic design projects can be added anytime.</div>
+  </section>
+
+  <section id="about" class="wrap">
+    <div class="section-head fade">
+      <div>
+        <div class="kicker">03 / About</div>
+        <h2>Designer behind<br>the visuals.</h2>
+      </div>
+    </div>
+    <div class="about">
+      <p class="about-text fade">I turn ideas into <span>simple, bold and memorable visuals</span> that help creators present their content professionally.</p>
+      <div class="facts fade">
+        <div class="fact"><span>Name</span><strong>Nandkishor</strong></div>
+        <div class="fact"><span>Speciality</span><strong>Graphic Design</strong></div>
+        <div class="fact"><span>Also creating</span><strong>Thumbnails + Reel Covers</strong></div>
+        <div class="fact"><span>Instagram</span><strong>@nk_graphic___designer</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <div class="contact fade">
+      <div>
+        <div class="kicker">04 / Contact</div>
+        <h2>Have a project in mind?</h2>
+      </div>
+      <a class="btn primary" href="https://www.instagram.com/nk_graphic___designer/" target="_blank" rel="noopener">Message on Instagram ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Nandkishor. All rights reserved.</span>
+  <span>Graphic Designer / Thumbnail Designer / Reel Cover Designer</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('show'); });
+  },{threshold:.12});
+  document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
