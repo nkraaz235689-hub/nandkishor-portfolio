@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nkraaz235689-hub.github.io/nandkishor-portfolio/sitemap.xml
