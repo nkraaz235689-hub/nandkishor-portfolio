@@ -40,8 +40,8 @@ h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;margin:0}
 .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #252525}
 .service{padding:28px 24px;border-bottom:1px solid #252525;border-right:1px solid #252525}.service:last-child{border-right:0}
 .num{color:#555;font-size:12px;margin-bottom:55px}.service h3{font-size:24px;margin:0 0 8px}.service p{color:#888;font-size:14px}
-.portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.work{height:auto;aspect-ratio:16/9;position:relative;overflow:hidden;background:#111;border:1px solid #222}
-.work img{width:100%;height:100%;object-fit:contain;display:block;transition:.5s;cursor:zoom-in}.work:hover img{transform:scale(1.04)}
+.portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.work{height:auto;min-height:0;aspect-ratio:auto;position:relative;overflow:hidden;background:#111;border:1px solid #222}
+.work img{width:100%;height:auto;max-height:none;object-fit:contain;display:block;transition:.5s;cursor:zoom-in}.work:hover img{transform:scale(1.04)}
 .overlay{position:absolute;left:0;right:0;bottom:0;padding:65px 22px 22px;background:linear-gradient(transparent,#000e)}
 .overlay span{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#aaa}.overlay h3{font-size:25px;margin:5px 0 0}
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.aboutbig{font:500 clamp(25px,3.4vw,42px)/1.12 "Space Grotesk";letter-spacing:-.04em}.aboutbig span{color:#666}
@@ -133,6 +133,30 @@ h1 em{color:#777}
 <footer class="wrap"><span>© 2026 Nandkishor.</span><span>Graphic Designer / Thumbnail Designer / YouTube Thumbnailer</span></footer>
 
 <script>
-document.querySelectorAll(".work img").forEach(function(img){img.addEventListener("click",function(){var m=document.createElement("div");m.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;cursor:zoom-out";var x=document.createElement("img");x.src=img.src;x.alt=img.alt||"Portfolio design";x.style.cssText="max-width:100%;max-height:100%;object-fit:contain";m.appendChild(x);m.addEventListener("click",function(){m.remove()});document.body.appendChild(m)})});
+document.querySelectorAll(".work img").forEach(function(img){
+  img.addEventListener("click",function(e){
+    e.stopPropagation();
+    var m=document.createElement("div");
+    m.setAttribute("role","dialog");
+    m.setAttribute("aria-label","Full design preview");
+    m.style.cssText="position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto;cursor:zoom-out;box-sizing:border-box";
+    var x=document.createElement("img");
+    x.src=img.currentSrc||img.src;
+    x.alt=img.alt||"Portfolio design";
+    x.style.cssText="display:block;width:auto;height:auto;max-width:96vw;max-height:92vh;object-fit:contain;margin:auto;box-shadow:0 10px 40px rgba(0,0,0,.5);border-radius:8px";
+    var close=document.createElement("button");
+    close.textContent="×";
+    close.setAttribute("aria-label","Close preview");
+    close.style.cssText="position:fixed;top:14px;right:18px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:32px;line-height:44px;cursor:pointer;z-index:100000";
+    function closeModal(){m.remove();document.body.style.overflow="";}
+    close.addEventListener("click",function(ev){ev.stopPropagation();closeModal()});
+    m.addEventListener("click",function(ev){if(ev.target===m)closeModal()});
+    document.addEventListener("keydown",function esc(ev){if(ev.key==="Escape"){closeModal();document.removeEventListener("keydown",esc)}});
+    m.appendChild(x);
+    m.appendChild(close);
+    document.body.style.overflow="hidden";
+    document.body.appendChild(m);
+  });
+});
 </script>
 </body></html>
